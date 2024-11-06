@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINESIS</title>
+    <link rel="stylesheet" href="../../estilos.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/sitekinesis?igsh=MXd1c29seWg2bnZqag==" target="_blank"><img
+                        src="data:image/png;base64,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"
+                        alt="Instagram"></a>
+                <a href="#"><img src="https://sf-static.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png"
+                        alt="TikTok"></a>
+                <a href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png"
+                        alt="Telegram"></a>
+            </div>
+            <div class="logo">
+                <h1>Kinesis</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar">
+                <button type="submit"><img
+                        src="https://www.cabodesantoagostinho.pe.leg.br/imagens/lupa.png/image_preview"
+                        alt="Pesquisar"></button>
+
+                <div class="user-icon">
+                    <img src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+                        alt="Usuário" onclick="aparecerlogin()">
+                    <div class="user">
+                        <div>email do caba</div>
+                        <p>Lista de favoritos</p>
+                        <p>Configuraçoes</p>
+                        <p>FAQ e ajuda</p>
+                        <hr>
+                        <p>Sair da conta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <!--Lista abaixo do header-->
+    <section>
+        <div class="lista">
+            <ul id="c1">
+                <li id="pt1">Esportes
+                    <ul id="n1">
+                        <li id="an1">Volei</li>
+                        <a href="basquete.html">
+                            <li id="an2">Basquete</li>
+                        </a>
+                        <li id="an3">Futebol</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="c2">
+                <li id="pt2">Técnicas
+                    <ul id="n2">
+                        <li id="bn1">Téc. Vôlei</li>
+                        <li id="bn2">Téc. Basquete</li>
+                        <li id="bn3">Téc. Futebol</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="c3">
+                <li id="pt3;">Cuidados
+                    <ul id="n3">
+                        <li id="cn1">Aquecimentos</li>
+                        <li id="cn2">Alongamentos</li>
+                        <li id="cn3">Ambiente Externo</li>
+                        <li id="cn4">Saúde Mental</li>
+                        <li id="cn5">Vestimentas</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="c4">
+                <li id="pt4">Videos
+                    <ul id="n4">
+                        <li id="dn1">Animações</li>
+                        <li id="dn2">Profissionais</li>
+                        <li id="dn3">Técnicas</li>
+                        <li id="dn4">Alongamentos</li>
+                        <li id="dn5">Aquecimentos</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="c5">
+                <li id="pt5">Especificações
+                    <ul id="n5">
+                        <li id="en1">Saúde Física</li>
+                        <li id="en2">Lesões</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="c6">
+                <li id="pt6">Tire Dúvidas
+                    <ul id="n6">
+                        <li id="fn1">FAQ</li>
+                        <li id="fn2">Ajuda</li>
+                        <li id="fn3">Sobre Nós</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!--Conteúdo do artigo-->
+        <div class="tudo">
+            <div class="quebrar">
+                <div class="principal">
+                    <h1>BASQUETE</h1>
+                    <p id="ouvir">ouvir texto</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/52/52049.png" alt="icone compartilhar"
+                        id="compartilhar">
+                </div>
+                <div class="p1">
+                    A marcação é o ato de defender um perímetro da quadra ou um atacante sem ou com bola. É uma ação
+                    tática, já que é necessário se adaptar ao adversário para realizá-la, ou seja, o atacante age e o
+                    defensor reage com o objetivo de dificultar a pontuação ou roubar a posse, tudo isso feito de forma
+                    segura, sem fazer faltar. Saber marcar da forma certa é um dos fundamentos mais importantes do
+                    esporte, realizar do jeito correto irá te trazer um jogo justo e simples.
+                </div>
+            </div>
+            <div class="container">
+                <div class="left">
+                    <div class="ambos">
+                        <div class="esquerda">
+                            <div class="basqueimg">
+                                <img src="https://sportbuzz.com.br/wp-content/uploads/2024/10/jokic-faz-triplo-duplo-mas-nuggets-perdem.jpeg"
+                                    alt="hate you">
+                            </div>
+                        </div>
+                        <div class="foco">
+                            <p>
+                            <div class="inicio_paragrafo">Para realizar o movimento correto, certifique-se de estar
+                                cumprindo os requisitos a
+                                seguir:
+                                <ul>
+                                    <li>Esteja jogando com vestimentas leves, por exemplo: camisas, shorts, regatas,
+                                        tênis
+                                        esportivo.</li>
+                                    <li>Se necessário, faça uso de joelheiras e/ou cotoveleiras.</li>
+                                    <li>Se estiver jogando em quadra aberta, não jogue em dias muito quentes ou com
+                                        chuva
+                                        intensa.</li>
+                                    <li>Esteja saudável ao jogar, por exemplo: esteja sem nenhuma lesão ou doença, não
+                                        vá
+                                        jogar após tomar medicamentos etc. Acesse cuidados!</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulo_paragrafo">POSTURA - MOVIMENTO</div>
+                            <br>
+                            <div class="inicio_paragrafo">Para iniciar o movimento, coloque seus pés levemente
+                                distantes da linha do seu ombro, agache até uma posição confortável, nunca passando o
+                                joelho da ponta do seu pé e deixando um ângulo maior que 90° entre a parte da trás da
+                                sua coxa e a sua panturrilha e mantenha a cabeça erguida a todo momento. Certifique de
+                                deixar os seus braços livres e estendidos para tentar parar o adversário e talvez
+                                conseguir a posse de bola, deixe a planta dos pés levemente levantadas, tome cuidado
+                                para não infligir o espaço necessário do adversário, uma causa frequente de lesão é a
+                                invasão da mão no perímetro do adversário, podendo — sem querer — chocar o seu dedo com
+                                o olho adversário, causa comum no esporte por descuido.</div>
+                            <br>
+                            <img src="../../../assets/marcacaoBSK.png" alt="Ato de marcar no basquetebol."
+                                style="display: block;margin: 0 auto;">
+                            <br>
+                            <div class="alinhamento">
+                            <div class="inicio_paragrafo" id="firstParag">Como foi dito anteriormente, o adversário age e o defensor
+                                reage, ou seja, se ele se movimentar, você terá que tomar uma decisão rápida para lidar.
+                                Caso o adversário se mova ao longo de perímetro da linha de 3 sem ameaçar infiltrar para
+                                uma cesta de perto, é necessário acompanhar seu movimento de forma lateral, caso ele vá
+                                para a esquerda, mova seu pé direito para essa direção e após aproxime com o esquerdo,
+                                nessa ordem e nesse contexto, mantendo a postura citada no texto acima; em hipótese
+                                alguma, mova o seu pé da mesma direção ao local que o adversário escolher ir, diminuindo
+                                a extremidade entre as suas pernas, podendo causar desequilíbrio e queda.
+                                DOCUMENTO!
+                                <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                                    <div class="tenor-gif-embed" data-postid="14094132" data-share-method="host" data-aspect-ratio="1.30279" data-width="300px">
+                                        <a href="https://tenor.com/view/crossed-allen-iverson-basketball-gif-14094132">Crossed Allen Iverson GIF</a> from <a href="https://tenor.com/search/crossed-gifs">Crossed GIFs</a>
+                                    </div>
+                                </div>
+                                <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                            <br>
+                            </div>
+                            <hr style="height: 1px;background-color: white;width: 1110px;">
+                            <br>
+                            <div class="titulo_paragrafo">ROUBO DE BOLA</div>
+                            <br>
+                            <div class="inicio_paragrafo">Lembre-se que na defesa, é mais importante dificultar a
+                                pontuação do que tentar roubar a
+                                posse a todo custo. Entretanto, caso o adversário esteja expondo a bola diversas vezes e
+                                abrindo brechas a roubos, faça o seguinte:
+                                <ul>
+                                    <li>Nunca tente roubar a bola com o braço vindo de cima para baixo, isso resultará
+                                        em
+                                        falta e em
+                                        piores casos, lesão.</li>
+                                    <li>Realize o movimento com a palma da mão para fora.</li>
+                                    <li>Não abuse do roubo de bola, apenas em brechas fáceis. A chance de acontecer uma
+                                        falta é
+                                        falta.</li>
+                                </ul>
+                                <img src="../../../assets/rouboDeBola.gif" alt="Atleta roubando a bola" style="width: 300px;display: block;margin: 0 auto;">
+                            </div>
+                            <br>
+                            <div class="titulo_paragrafo">CONTATO COM O ATACANTE</div>
+                            <br>
+                            <div class="inicio_paragrafo">O basquete é caracterizado como um esporte sem muito contato
+                                físico, mas ao analisar o jogo,
+                                é possível perceber que isso não é verdade, em quase todas as tentativas de arremesso,
+                                há
+                                uma certa aproximação entre o defensor e atacante. De acordo com as regras, é percebível
+                                que
+                                o jogador com a posse possui uma maior liberdade para manter contato com o marcador,
+                                podendo
+                                haver diversas trombadas e leves empurrões. Dependendo da personalidade dos praticantes,
+                                a
+                                partida pode ser mais agressiva (com mais contato) ou mais calma (com menos contato), a
+                                primeira opção pode levar a diversas faltas e algumas lesões. Caso o atacante esteja
+                                sendo agressivo e dando leves trombadas frequentes ao tentar passar,
+                                o defensor pode usar o antebraço grudado ao peito para bloquear a passagem do defensor,
+                                mas
+                                nunca o empurrar, o que resultaria em falta de defesa. CHECAR DOCUMENTO!</div>
+                            <div class="inicio_paragrafo">Caso o defensor consiga passar da sua marcação, será
+                                necessária uma corrida lado a lado com o atacante em direção a cesta, mas sem a intenção
+                                de derrubá-lo, empurrá-lo ou fazer falta proposital. Tome bastante cuidado com a postura
+                                das suas pernas ao correr, caso você invada o espaço do seu adversário, é possível que
+                                ele se machuque seriamente se cair por conta de um tropeço no corpo do protetor da
+                                cesta; caso o seu oponente consiga fintar e ir para a bandeja ou enterrada com pulo,
+                                tome cuidado com o joelho dele, já que, como o defensor está no chão sem pular, o joelho
+                                do atacante pode ir diretamente em direção ao rosto do marcador, podendo levar a sérias
+                                complicações.</div>
+                            <br>
+                            <div class="titulo_paragrafo">MARCAÇÃO SEM BOLA</div>
+                            <br>
+                            <div class="inicio_paragrafo">Saber se posicionar contra um atacante sem bola é mais
+                                complicado do que parece, e é extremamente útil quando se trata de partidas 5x5, sendo
+                                uma das formas mais eficazes de dificultar o jogo do seu oponente. A postura da marcação
+                                sem bola é basicamente a mesma, podendo variar ligeiramente dependendo do contexto do
+                                jogo e da sua habilidade, mas sempre mantendo a premissa. É necessário compreender o seu
+                                oponente e se adaptar ao estilo de jogo dele, busque marcar oponentes que possuem
+                                características parecidas com as suas, para tentar uma disputa justa, sabemos que não
+                                será todo caso que é possível escolher quem marcar, mas caso possível, faça a melhor
+                                escolha e a partida se tornará mais fácil.</div>
+
+                            <div class="inicio_paragrafo">
+                                Existem algumas funções quando se trata de marcar o oponente sem a posse, como bloquear
+                                a
+                                linha do passe, dificultar a passagem dele ao garrafão e/ou tentar atrapalhar o ataque
+                                adversário com algumas técnicas de defesa avançadas, como pick and roll, marcação dupla
+                                etc. Os fundamentos de jogar contra um atacante sem bola podem ser realizados da
+                                seguinte
+                                maneira:
+                                <ul>
+                                    <li>Estenda o braço em direção ao seu oponente e o outro em direção a bola.</li>
+                                    <li>Mantenha a postura com os joelhos semiflexionados, a planta dos pés ligeiramente
+                                        levantada e
+                                        a cabeça erguida.</li>
+                                    <li>Tenha o seu oponente sem a bola e o que está com a posse em seu campo de visão,
+                                        conseguindo
+                                        mais informações.</li>
+                                </ul>
+                            </div>
+                            <div class="inicio_paragrafo">A principal função do marcador contra um oponente sem posse é
+                                dificultar passes fáceis e/ou
+                                roubar a bola em um passe errado, pode variar dependendo do contexto do jogo,
+                                entretanto,
+                                esses são os fundamentos básicos. Nesse contexto, se lesionar é bem raro, mas pode
+                                acontecer, tome cuidado com as corridas lado a lado caso o seu oponente consiga passar,
+                                esse
+                                é o principal foco de lesão na zona defensiva. CHECAR DOCUMENTO!</div>
+                                <br>
+                            <div class="titulo_paragrafo">VISÃO GERAL</div>
+                            <br>
+                            <div class="inicio_paragrafo">Visamos que a prática do esporte na zona defensiva de forma
+                                segura pode ser feita da seguinte maneira:</div>
+                            <ul>
+                                <li>Uso de equipamentos protetores para iniciantes, como cotoveleiras e joelheiras;</li>
+                                <li>Uso de vestimentas adequadas para a prática esportiva.</li>
+                                <li>Jogar em condições externas boas para o desenvolvimento do esporte, Ex. Quadra sem
+                                    buracos, seca e limpa, condição climática favorável.
+                                <li>Jogue sem riscos de saúde.</li>
+                                <li>Ao defender, manter a postura com os joelhos semiflexionados, planta dos pés
+                                    levemente levantadas, cabeça erguida e braços estendidos.</li>
+                                <li>Caso o seu oponente seja agressivo, bloquear a passagem dele com o seu antebraço
+                                    colado ao corpo sem empurrá-lo.</li>
+                                <li>Tome cuidado com o espaço do seu oponente, não invada tanto o limite físico dele, o
+                                    que causaria falta de defesa.</li>
+                                <li>Em marcação contra um inimigo sem a posse, manter a postura inicial, mas com os
+                                    braços estendidos em direção ao atacante próximo e ao que tem a posse.</li>
+                                <li>Em corridas em direção a cesta, tome cuidado com duas coisas: o pulo do adversário e
+                                    a postura da sua perna; podendo causar diversas lesões e faltas.</li>
+                            </ul>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="direita">
+                    <div class="video">
+                        <h1>Basquete tudo que você precisa saber:</h1>
+                        <video src="../../../assets/tela_davi.mp4" controls width="600" height="300"
+                            poster="..\..\..\assets\Capa Vídeo Basquete.png">
+                        </video>
+                    </div>
+                    <h1 id="relacionados">ARTIGOS RELACIONADOS</h1>
+                    <div class="artigos">
+                        <div id="j1">
+                            <div id="grudar">
+                                <h1><em>Arremessando no Basquete</em></h1>
+                                <hr>
+                            </div>
+                            <p>Saiba a melhor forma de arremesar no basquete!</p>
+                        </div>
+                        <div id="j2">
+                            <div id="grudar2">
+                                <h1><em>Driblando no Basquete</em></h1>
+                                <hr>
+                            </div>
+                            <p>Aprenda o fundamento mais básico do esporte!</p>
+                        </div>
+                        <div id="j3">
+                            <div id="grudar3">
+                                <h1><em>Bandeja no Basquete</em></h1>
+                                <hr>
+                            </div>
+                            <p>Domine a melhor forma de pontuar no jogo!</p>
+                        </div>
+                        <div class="boton">
+                            <button>Saiba mais</button>
+                        </div>
+                    </div>
+                    <button id="btnReferencias">Referências</button>
+
+                    <!-- Div de sobreposição e referências -->
+                    <div id="overlay">
+                        <div id="referencias">
+                            <h3>Referências</h3>
+                            <ul>
+                                <li>MAES, Rafael Fernando; PIEMONTEZ, George Roberts; MARTINS, Ana Claudia Vieiras; FERREIRA, Luciana; MURARO, Caren Fernanda. FUNDAMENTOS DO BASQUETEBOL COM ENFASE NO JUMP. 2014. Disponível em: <a href="https://periodicos.ufv.br/revminef/article/view/10083/5557">https://periodicos.ufv.br/revminef/article/view/10083/5557</a>. Acesso em: 30 out. 2024.</li>
+                                <li>MARQUETA, Pedro Manonelles; TARRERO, Luís Tárrega. EPIDEMIOLOGIA DAS LESÕES NO
+                                    BASQUETE. 1999. Disponível em: <a href="https://www.scielo.br/j/rbme/a/YcXK9DVWN8kMgQKswDybVCQ/">https://www.scielo.br/j/rbme/a/YcXK9DVWN8kMgQKswDybVCQ/</a>.
+                                    Acesso em: 30 out. 2024.</li>
+                                <li>CANAN, Felipe. Teoria e fundamentos do basquetebol e handebol. 2020. Disponível em: <a href="">https://www.researchgate.net/profile/Felipe-Canan/publication/380903936_Teoria_e_Fundamentos_do_Basquetebol_e_Handebol/links/6654ce58479366623a1ae93a/Teoria-e-Fundamentos-do-Basquetebol-e-Handebol.pdf. Acesso em: 30 out. 2024. </li>
+                                <li>SIKANA BRASIL. Regras básicas do basquete. 2017. Disponível em: <a href="https://www.youtube.com/watch?v=DRMBX4sA-3Q">https://www.youtube.com/watch?v=DRMBX4sA-3Q</a>. Acesso em: 30 out. 2024.</li>
+                            </ul>
+                            <button id="fecharReferencias">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="login" id="conta">
+            <div class="lotitulos">
+                <h1>Bem vindo</h1>
+                <p>Novo no <strong>KINESIS</strong><a href=""> Faça seu registro</a></p>
+            </div>
+            <div class="loinput">
+
+                <p>EMAIL</p>
+                <input type="email" name="" id="email" placeholder="email">
+
+
+                <P>SENHA</P>
+                <input type="password" name="" id="pass" placeholder="senha">
+
+                <a href="">esqueçeu sua senha?</a>
+            </div>
+            <div class="loentrar">
+                <button onclick="entrar()">Entrar</button>
+            </div>
+            <div id="lin">
+                <hr>
+            </div>
+            <div class="logogle">
+                <p>ou</p>
+                <img src="/fuck/i606944.png" alt="" id="goggle">
+                <img src="/fuck/facebook-logo-facebook-icon-transparent-free-png.png" alt="" id="facebook">
+            </div>
+    </section>
+    <footer>
+        <p>&copy; Todos os direitos reservados à KINESIS
+        <p>
+    </footer>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
